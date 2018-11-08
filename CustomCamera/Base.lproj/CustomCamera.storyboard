@@ -89,15 +89,15 @@
                                 <action selector="cancelButtonWithSender:" destination="fbR-Rw-h1i" eventType="touchUpInside" id="1Qu-Tr-1an"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06I-1z-AwF">
-                            <rect key="frame" x="157" y="612" width="100" height="100"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06I-1z-AwF">
+                            <rect key="frame" x="174.5" y="647" width="65" height="65"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="100" id="3jC-QK-mz0"/>
+                                <constraint firstAttribute="height" constant="65" id="2sw-sd-cFq"/>
                                 <constraint firstAttribute="width" secondItem="06I-1z-AwF" secondAttribute="height" multiplier="1:1" id="NT4-Ce-PbP"/>
-                                <constraint firstAttribute="width" constant="100" id="Vkz-m9-h1W"/>
+                                <constraint firstAttribute="width" constant="65" id="iyH-nx-2RA"/>
                             </constraints>
-                            <state key="normal" title="Shoot"/>
+                            <state key="normal" backgroundImage="button_camera_normal"/>
+                            <state key="highlighted" backgroundImage="button_camera_press"/>
                             <connections>
                                 <action selector="shootButtonWithSender:" destination="fbR-Rw-h1i" eventType="touchUpInside" id="i4u-Qk-dIb"/>
                             </connections>
@@ -115,6 +115,7 @@
                     <viewLayoutGuide key="safeArea" id="bG9-Ez-faL"/>
                     <connections>
                         <outlet property="cancelButton" destination="Rgf-iF-9j7" id="VSv-NC-zeG"/>
+                        <outlet property="takePhotoButton" destination="06I-1z-AwF" id="KHa-4D-Zfi"/>
                     </connections>
                 </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -123,6 +124,8 @@
     </scenes>
     <resources>
         <image name="arrow_back_white" width="16" height="16"/>
+        <image name="button_camera_normal" width="120" height="123"/>
+        <image name="button_camera_press" width="120" height="123"/>
         <image name="camera_bg" width="320" height="568"/>
     </resources>
 </document>

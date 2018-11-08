@@ -16,6 +16,7 @@ protocol CustomOverlayDelegate{
 class CustomOverlayView: UIView {
     
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var takePhotoButton: UIButton!
     
     var delegate:CustomOverlayDelegate! = nil
     
