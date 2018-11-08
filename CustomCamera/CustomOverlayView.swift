@@ -15,15 +15,14 @@ protocol CustomOverlayDelegate{
 
 class CustomOverlayView: UIView {
     
-    @IBOutlet weak var cameraLabel: UILabel!
+    @IBOutlet weak var cancelButton: UIButton!
+    
     var delegate:CustomOverlayDelegate! = nil
     
     @IBAction func cancelButton(sender: UIButton) {
-        cameraLabel.text = "I want to exit"
         delegate.didCancel(overlayView: self)
     }
     @IBAction func shootButton(sender: UIButton) {
-        cameraLabel.text = "Even Cooler Camera"
         delegate.didShoot(overlayView: self)
     }
 }

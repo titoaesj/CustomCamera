@@ -11,11 +11,7 @@ import AVFoundation
 
 class CustomCameraViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, CustomOverlayDelegate {
     
-    func didCancel(overlayView: CustomOverlayView) {
-    }
-    
-    func didShoot(overlayView: CustomOverlayView) {
-    }
+   
     
     
     @IBOutlet weak var previewView: UIView!
@@ -38,7 +34,6 @@ class CustomCameraViewController: UIViewController, UINavigationControllerDelega
             
             //customView stuff
             customView.frame = self.imagePickerControoler.view.frame
-            customView.cameraLabel.text = "Hello Cute Camera"
             customView.delegate = self
             
             
@@ -80,6 +75,15 @@ class CustomCameraViewController: UIViewController, UINavigationControllerDelega
         
         // salva no diretorio de documentos
         fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
+    }
+    
+    
+    func didCancel(overlayView: CustomOverlayView) {
+         imagePickerControoler.dismiss(animated: true, completion: nil)
+    }
+    
+    func didShoot(overlayView: CustomOverlayView) {
+        imagePickerControoler.takePicture()
     }
     
 }
