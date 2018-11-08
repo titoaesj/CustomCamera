@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D6D260921947114004E7D67 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D260821947114004E7D67 /* CustomOverlayView.swift */; };
 		9D87FB952193610F00C38C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87FB942193610F00C38C2B /* AppDelegate.swift */; };
-		9D87FB972193610F00C38C2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87FB962193610F00C38C2B /* ViewController.swift */; };
+		9D87FB972193610F00C38C2B /* CustomCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87FB962193610F00C38C2B /* CustomCameraViewController.swift */; };
 		9D87FB9A2193610F00C38C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D87FB982193610F00C38C2B /* Main.storyboard */; };
 		9D87FB9C2193611300C38C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D87FB9B2193611300C38C2B /* Assets.xcassets */; };
 		9D87FB9F2193611300C38C2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D87FB9D2193611300C38C2B /* LaunchScreen.storyboard */; };
+		9D87FBB921937C5200C38C2B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87FBB821937C5200C38C2B /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D6D260821947114004E7D67 /* CustomOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		9D87FB912193610F00C38C2B /* CustomCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D87FB942193610F00C38C2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D87FB962193610F00C38C2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D87FB962193610F00C38C2B /* CustomCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraViewController.swift; sourceTree = "<group>"; };
 		9D87FB992193610F00C38C2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D87FB9B2193611300C38C2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D87FB9E2193611300C38C2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D87FBA02193611300C38C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D87FBB821937C5200C38C2B /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				9D87FB942193610F00C38C2B /* AppDelegate.swift */,
-				9D87FB962193610F00C38C2B /* ViewController.swift */,
+				9D87FB962193610F00C38C2B /* CustomCameraViewController.swift */,
 				9D87FB982193610F00C38C2B /* Main.storyboard */,
 				9D87FB9B2193611300C38C2B /* Assets.xcassets */,
 				9D87FB9D2193611300C38C2B /* LaunchScreen.storyboard */,
 				9D87FBA02193611300C38C2B /* Info.plist */,
+				9D87FBB821937C5200C38C2B /* GradientView.swift */,
+				9D6D260821947114004E7D67 /* CustomOverlayView.swift */,
 			);
 			path = CustomCamera;
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D87FB972193610F00C38C2B /* ViewController.swift in Sources */,
+				9D87FB972193610F00C38C2B /* CustomCameraViewController.swift in Sources */,
 				9D87FB952193610F00C38C2B /* AppDelegate.swift in Sources */,
+				9D6D260921947114004E7D67 /* CustomOverlayView.swift in Sources */,
+				9D87FBB921937C5200C38C2B /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +291,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BNFBJPQ76H;
 				INFOPLIST_FILE = CustomCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +310,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BNFBJPQ76H;
 				INFOPLIST_FILE = CustomCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
