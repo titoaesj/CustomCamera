@@ -31,10 +31,26 @@ class PreviewViewController: UIViewController {
         let imagePAth = (self.getDirectoryPath() as NSString).appendingPathComponent(imageName)
         if fileManager.fileExists(atPath: imagePAth){
             self.previewImageView.image = UIImage(contentsOfFile: imagePAth)
+            
+            UIImageWriteToSavedPhotosAlbum( self.previewImageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+
         }else{
             print("Sem imagem")
         }
         
+    }
+
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Ocorreu um error ao salvar", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Sucesso!", message: "Imagem adicionada ao album.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
     }
     
 }
