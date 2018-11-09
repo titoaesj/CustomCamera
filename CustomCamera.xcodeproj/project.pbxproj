@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9D6D260921947114004E7D67 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D260821947114004E7D67 /* CustomOverlayView.swift */; };
-		9D6D260F219486FB004E7D67 /* TakePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D260E219486FB004E7D67 /* TakePhoto.swift */; };
 		9D6D261C2194C935004E7D67 /* ConfirmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6D261B2194C935004E7D67 /* ConfirmeViewController.swift */; };
 		9D87FB952193610F00C38C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87FB942193610F00C38C2B /* AppDelegate.swift */; };
 		9D87FB972193610F00C38C2B /* CustomCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87FB962193610F00C38C2B /* CustomCameraViewController.swift */; };
@@ -17,11 +16,11 @@
 		9D87FB9F2193611300C38C2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D87FB9D2193611300C38C2B /* LaunchScreen.storyboard */; };
 		9D87FBB921937C5200C38C2B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87FBB821937C5200C38C2B /* GradientView.swift */; };
 		9DE516ED2195AF2500607998 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE516EC2195AF2500607998 /* PreviewViewController.swift */; };
+		9DE516F82195BBB900607998 /* String+Filename.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE516F72195BBB900607998 /* String+Filename.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9D6D260821947114004E7D67 /* CustomOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
-		9D6D260E219486FB004E7D67 /* TakePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhoto.swift; sourceTree = "<group>"; };
 		9D6D261B2194C935004E7D67 /* ConfirmeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmeViewController.swift; sourceTree = "<group>"; };
 		9D87FB912193610F00C38C2B /* CustomCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D87FB942193610F00C38C2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +31,7 @@
 		9D87FBA02193611300C38C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D87FBB821937C5200C38C2B /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		9DE516EC2195AF2500607998 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		9DE516F72195BBB900607998 /* String+Filename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Filename.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +72,9 @@
 				9D6D260821947114004E7D67 /* CustomOverlayView.swift */,
 				9D87FB9B2193611300C38C2B /* Assets.xcassets */,
 				9D87FBA02193611300C38C2B /* Info.plist */,
-				9D6D260E219486FB004E7D67 /* TakePhoto.swift */,
 				9D6D261B2194C935004E7D67 /* ConfirmeViewController.swift */,
 				9DE516EC2195AF2500607998 /* PreviewViewController.swift */,
+				9DE516F72195BBB900607998 /* String+Filename.swift */,
 			);
 			path = CustomCamera;
 			sourceTree = "<group>";
@@ -150,13 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D6D260F219486FB004E7D67 /* TakePhoto.swift in Sources */,
 				9D6D261C2194C935004E7D67 /* ConfirmeViewController.swift in Sources */,
 				9DE516ED2195AF2500607998 /* PreviewViewController.swift in Sources */,
 				9D87FB972193610F00C38C2B /* CustomCameraViewController.swift in Sources */,
 				9D87FB952193610F00C38C2B /* AppDelegate.swift in Sources */,
 				9D6D260921947114004E7D67 /* CustomOverlayView.swift in Sources */,
 				9D87FBB921937C5200C38C2B /* GradientView.swift in Sources */,
+				9DE516F82195BBB900607998 /* String+Filename.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

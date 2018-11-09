@@ -63,7 +63,7 @@ class CustomCameraViewController: UIViewController, UINavigationControllerDelega
         if (segue.identifier == "segueToConfirme") {
             let destinationVC = segue.destination as! ConfirmeViewController
             if let mImage = sender as? UIImage {
-                destinationVC.image = mImage
+                destinationVC.mImage = mImage
                 destinationVC.imagePickerControoler = imagePickerControoler
             }
         }
@@ -76,25 +76,6 @@ class CustomCameraViewController: UIViewController, UINavigationControllerDelega
         alertVC.addAction(okAction)
         present(alertVC,animated: true,completion: nil)
     }
-    
-//    func saveImage(imageName: String) {
-//
-//        // Cria uma instancia para o FleManager
-//        let fileManager = FileManager.default
-//
-//        // pega o path da imagem
-//        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
-//
-//        // Imagem tirada da câmera
-//        let image = pictureUIImageView.image!
-//
-//        // pega os dados do PNG da imagem
-//        let data = image.pngData()
-//
-//        // salva no diretorio de documentos
-//        fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
-//    }
-    
     
     func didCancel(overlayView: CustomOverlayView) {
          imagePickerControoler.dismiss(animated: true, completion: nil)

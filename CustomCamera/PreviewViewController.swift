@@ -12,23 +12,29 @@ class PreviewViewController: UIViewController {
     
     @IBOutlet weak var previewImageView: UIImageView!
     
-    var image : UIImage?
+    private let directoryName = "customCamera"
+    var fileName : String?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        previewImageView.image = image
+        if fileName != nil {
+            getPreViewImage(imageName: fileName!)
+        }
     }
     
+    private func getDirectoryPath() -> String {
+        return (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(directoryName)
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    private func getPreViewImage(imageName: String){
+        let fileManager = FileManager.default
+        let imagePAth = (self.getDirectoryPath() as NSString).appendingPathComponent(imageName)
+        if fileManager.fileExists(atPath: imagePAth){
+            self.previewImageView.image = UIImage(contentsOfFile: imagePAth)
+        }else{
+            print("Sem imagem")
+        }
+        
+    }
     
 }
