@@ -63,13 +63,26 @@
                                 <action selector="shootButtonWithSender:" destination="fbR-Rw-h1i" eventType="touchUpInside" id="i4u-Qk-dIb"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxf-E9-R57">
+                            <rect key="frame" x="344" y="665.5" width="38" height="28.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="38" id="Cfo-no-IDY"/>
+                                <constraint firstAttribute="width" secondItem="wxf-E9-R57" secondAttribute="height" multiplier="4:3" id="gkx-oh-A7Z"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="camera_reverse"/>
+                            <connections>
+                                <action selector="reverseButton:" destination="fbR-Rw-h1i" eventType="touchUpInside" id="iU6-zh-elt"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="wxf-E9-R57" secondAttribute="trailing" constant="32" id="0cN-vZ-lUK"/>
                         <constraint firstItem="bG9-Ez-faL" firstAttribute="trailing" secondItem="kr3-eq-2ec" secondAttribute="trailing" constant="24" id="54P-TH-wvf"/>
                         <constraint firstItem="06I-1z-AwF" firstAttribute="centerX" secondItem="bG9-Ez-faL" secondAttribute="centerX" id="5eU-wD-iRK"/>
                         <constraint firstItem="Rgf-iF-9j7" firstAttribute="leading" secondItem="bG9-Ez-faL" secondAttribute="leading" constant="24" id="KKE-vL-RA7"/>
                         <constraint firstItem="bG9-Ez-faL" firstAttribute="bottom" secondItem="06I-1z-AwF" secondAttribute="bottom" constant="20" id="ZFY-wl-UvR"/>
                         <constraint firstItem="kr3-eq-2ec" firstAttribute="leading" secondItem="Rgf-iF-9j7" secondAttribute="trailing" constant="16" id="dp6-eP-iPX"/>
+                        <constraint firstItem="wxf-E9-R57" firstAttribute="centerY" secondItem="06I-1z-AwF" secondAttribute="centerY" id="fAP-GU-bkp"/>
                         <constraint firstItem="kr3-eq-2ec" firstAttribute="top" secondItem="fbR-Rw-h1i" secondAttribute="top" constant="8" id="oNr-My-JuB"/>
                         <constraint firstItem="Rgf-iF-9j7" firstAttribute="top" secondItem="fbR-Rw-h1i" secondAttribute="top" constant="22" id="w45-vZ-inK"/>
                     </constraints>
@@ -81,7 +94,7 @@
                 </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23.199999999999999" y="46.326836581709152"/>
+            <point key="canvasLocation" x="22" y="49"/>
         </scene>
         <!--Confirme View Controller-->
         <scene sceneID="G0H-oQ-3SP">
@@ -141,17 +154,18 @@
                     <navigationItem key="navigationItem" id="2eC-ne-wyR"/>
                     <connections>
                         <outlet property="previewImageView" destination="CLW-Hc-SSH" id="JOV-Eb-YFM"/>
-                        <segue destination="fGC-Ly-Krx" kind="show" identifier="segueToShowImage" id="AR8-zm-kyF"/>
+                        <segue destination="fGC-Ly-Krx" kind="showDetail" identifier="segueToShowImage" id="AR8-zm-kyF"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="segueToCamera" id="mmz-Ef-5ty"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1g-c3-Swj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="23" y="944"/>
         </scene>
-        <!--View Controller-->
+        <!--Preview View Controller-->
         <scene sceneID="G1k-YL-kW4">
             <objects>
-                <viewController id="fGC-Ly-Krx" sceneMemberID="viewController">
+                <viewController id="fGC-Ly-Krx" customClass="PreviewViewController" customModule="CustomCamera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W2j-Be-G8G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,17 +176,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="9b5-pT-JZj" firstAttribute="trailing" secondItem="Hqf-bS-qXG" secondAttribute="trailing" id="0v5-a6-W9I"/>
-                            <constraint firstItem="9b5-pT-JZj" firstAttribute="bottom" secondItem="Hqf-bS-qXG" secondAttribute="bottom" id="29N-OL-Cvg"/>
-                            <constraint firstItem="Hqf-bS-qXG" firstAttribute="leading" secondItem="9b5-pT-JZj" secondAttribute="leading" id="ADR-6p-4lB"/>
-                            <constraint firstItem="Hqf-bS-qXG" firstAttribute="top" secondItem="9b5-pT-JZj" secondAttribute="top" id="XNv-nR-2pJ"/>
+                            <constraint firstItem="Hqf-bS-qXG" firstAttribute="bottom" secondItem="9b5-pT-JZj" secondAttribute="bottom" id="C58-qn-JjY"/>
+                            <constraint firstItem="Hqf-bS-qXG" firstAttribute="top" secondItem="9b5-pT-JZj" secondAttribute="top" id="KXy-TK-KGv"/>
+                            <constraint firstItem="Hqf-bS-qXG" firstAttribute="trailing" secondItem="9b5-pT-JZj" secondAttribute="trailing" id="RsE-Mu-G8C"/>
+                            <constraint firstItem="Hqf-bS-qXG" firstAttribute="leading" secondItem="9b5-pT-JZj" secondAttribute="leading" id="WwS-M8-7jy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9b5-pT-JZj"/>
                     </view>
+                    <connections>
+                        <outlet property="previewImageView" destination="Hqf-bS-qXG" id="QRS-xr-1Ee"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57H-9F-VdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="942"/>
+            <point key="canvasLocation" x="1236" y="941.37931034482767"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ava-dy-gfK">
@@ -184,6 +201,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vix-hO-pVS">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="4ht-Nv-8Ad" kind="relationship" relationship="rootViewController" id="XG1-0u-LQd"/>
                     </connections>
@@ -198,6 +218,7 @@
         <image name="button_camera_normal" width="120" height="123"/>
         <image name="button_camera_press" width="120" height="123"/>
         <image name="camera_bg" width="320" height="568"/>
+        <image name="camera_reverse" width="384" height="288"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XAg-Fw-4Dc"/>

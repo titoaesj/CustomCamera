@@ -11,6 +11,7 @@ import UIKit
 protocol CustomOverlayDelegate{
     func didCancel(overlayView:CustomOverlayView)
     func didShoot(overlayView:CustomOverlayView)
+    func didReverse(overlayView:CustomOverlayView)
 }
 
 class CustomOverlayView: UIView {
@@ -25,5 +26,8 @@ class CustomOverlayView: UIView {
     }
     @IBAction func shootButton(sender: UIButton) {
         delegate.didShoot(overlayView: self)
+    }
+    @IBAction func reverseButton(_ sender: UIButton) {
+        delegate.didReverse(overlayView: self)
     }
 }

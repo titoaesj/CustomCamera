@@ -43,8 +43,7 @@ class CustomCameraViewController: UIViewController, UINavigationControllerDelega
     }
     
     private func segueToConfirme() {
-    self.performSegue(withIdentifier: "segueToConfirme", sender: image
-        )
+    self.performSegue(withIdentifier: "segueToConfirme", sender: image)
     }
     
     
@@ -65,6 +64,7 @@ class CustomCameraViewController: UIViewController, UINavigationControllerDelega
             let destinationVC = segue.destination as! ConfirmeViewController
             if let mImage = sender as? UIImage {
                 destinationVC.image = mImage
+                destinationVC.imagePickerControoler = imagePickerControoler
             }
         }
     }
@@ -103,5 +103,11 @@ class CustomCameraViewController: UIViewController, UINavigationControllerDelega
     func didShoot(overlayView: CustomOverlayView) {
         imagePickerControoler.takePicture()
     }
-    
+    func didReverse(overlayView: CustomOverlayView) {
+        if (imagePickerControoler.cameraDevice == .front) {
+            imagePickerControoler.cameraDevice = .rear
+        } else {
+            imagePickerControoler.cameraDevice = .front
+        }
+    }
 }
